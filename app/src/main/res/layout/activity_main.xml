@@ -6,8 +6,17 @@
     android:layout_height="match_parent"
     android:gravity="center_vertical"
     android:orientation="vertical"
-    android:background="#666"
+    android:background="#333"
     tools:context=".MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Race Start Practice Program"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:textSize="26sp"
+        android:fontFamily="@font/orbitron_variable"
+        android:textColor="#ffffff"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,7 +63,17 @@
     </LinearLayout>
     <Button
         android:id="@+id/startButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Start"/>
+        android:layout_marginLeft="25sp"
+        android:layout_marginRight="25sp"
+        android:paddingTop="25sp"
+        android:paddingBottom="25sp"
+        android:text="Start Program"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#222"
+        android:layout_marginTop="50sp"
+        android:fontFamily="@font/orbitron_variable"
+        android:textSize="15sp"
+        android:layout_gravity="center_horizontal"/>
 </LinearLayout>

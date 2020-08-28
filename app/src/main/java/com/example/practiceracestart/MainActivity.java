@@ -7,6 +7,8 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import java.util.Random;
@@ -40,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void startLights() {
+        this.startButton.setEnabled(false);
+
         int randomTime = 500+ (new Random().nextInt(3001));
 
         new Handler().postDelayed(new Runnable() {
@@ -117,6 +121,8 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.light4.invalidate();
                 MainActivity.light5.setColor(MainActivity.blackColorHex);
                 MainActivity.light5.invalidate();
+
+                MainActivity.startButton.setEnabled(true);
             }
         }, 8000+randomTime);
     }
@@ -126,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
     protected static CircleView light3;
     protected static CircleView light4;
     protected static CircleView light5;
-    protected Button startButton;
+    protected static Button startButton;
 
     private static final String redColorHex = "#E74000";
     private static final String greenColorHex = "#00E740";
